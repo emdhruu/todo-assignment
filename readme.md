@@ -4,12 +4,12 @@ A simple **Todos Management App** built with **React.js, Zustand, and Tailwind C
 
 ## Features
 - Fetch & Display Todos (Pagination - 10 per page)
-- Create, ✏️ Update, Delete Todos
+- Create, Update, Delete Todos
 - Toggle Completion Status
 - Notifications & Error Handling
 - Zustand for State Management
 
-## 🛠 Tech Stack
+## Tech Stack
 - React.js
 - Tailwind CSS
 - Zustand (State Management)
