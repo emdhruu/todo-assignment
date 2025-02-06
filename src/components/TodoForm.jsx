@@ -63,6 +63,7 @@ const TodoForm = () => {
           <div
             className="flex items-center hover:cursor-pointer"
             onClick={() => setCurrentTabStatus(idx.name)}
+            key={i}
           >
             <span
               className={` lg:text-xl md:text-xl text-lg mr-2 ${
