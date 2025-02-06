@@ -1,4 +1,4 @@
-# 📌 Todos CRUD - React.js & Zustand
+# Todos CRUD - React.js & Zustand
 
 ## Project Details
 
@@ -8,7 +8,7 @@ A simple **Todos Management App** built with **React.js**, **Zustand**, and **Ta
 
 ### Live Link
 
-- [Live Demo](https://your-live-link.com)
+- [Live Demo](https://simple-todos-manager.netlify.app/)
 
 ### Features
 
@@ -18,7 +18,6 @@ A simple **Todos Management App** built with **React.js**, **Zustand**, and **Ta
 - **Local Persistence**: Todos are stored in **localStorage** for data persistence.
 - **Notifications**: Toast notifications for success/error messages using **react-hot-toast**.
 - **Icons**: **lucide-react** icons for UI components.
-- **Error Handling**: Toast notifications for success/error messages.
 - **Responsive Design**: Built with **Tailwind CSS** for a mobile-first, responsive layout.
 
 ### Tech Stack
@@ -33,7 +32,7 @@ A simple **Todos Management App** built with **React.js**, **Zustand**, and **Ta
 
 ## Installation
 
-### Prerequisites ⚙️
+### Prerequisites
 
 Ensure you have the following installed:
 
@@ -73,6 +72,6 @@ npm run build
 
 This will create a dist folder containing optimized files for deployment.
 
-### Made
+### Made :
 
-- **By**: Dhruti Thakkar
+- **By** Dhruti Thakkar
