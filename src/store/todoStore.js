@@ -5,6 +5,35 @@ const useTodoStore = create((set) => ({
   todos: [], //Array to store todos
   loading: false, //loading state
   error: null, //error state
+  status: [
+    {
+      name: "All",
+      number: 35,
+    },
+    {
+      name: "Open",
+      number: 5,
+    },
+    {
+      name: "Closed",
+      number: 7,
+    },
+    {
+      name: "Archived",
+      number: 2,
+    },
+  ],
+  currentTabStatus: "All",
+
+  // toggle the current tab based on the status
+  setCurrentTabStatus: (currentTabStatus) => set({ currentTabStatus }),
+
+  toggleTodo: (id) =>
+    set((state) => ({
+      todos: state.todos.map((todo) =>
+        todo.id === id ? { ...todo, completed: !todo.completed } : todo
+      ),
+    })),
 
   // fetch todos list from API
   fetchTodos: async () => {
@@ -13,7 +42,7 @@ const useTodoStore = create((set) => ({
       const res = await axiosInstance.get("/todos?limit=10");
       set({ todos: res.data.todos });
     } catch (error) {
-      set({ error: error.message, loading: falses });
+      set({ error: error.message, loading: false });
     } finally {
       set({ loading: false, error: null });
     }
@@ -27,12 +56,12 @@ const useTodoStore = create((set) => ({
     } catch (error) {
       set({ error: error.message });
     }
-  },    
+  },
 
   // update todo from todo's list
   update: async (userId, updatedTodo) => {
     try {
-      await axiosInstance.post(`/todos/${userId }`, updatedTodo);
+      await axiosInstance.put(`/todos/${userId}`, updatedTodo);
 
       set((state) => ({
         todos: state.todos.map((todo) =>
