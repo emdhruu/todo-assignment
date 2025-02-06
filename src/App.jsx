@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import useThemeStore from "./store/themeStore";
 import TodoContainer from "./components/TodoContainer";
-// import ToggleButton from "./components/ToggleButton";
 
 const App = () => {
   const { darkMode, toggleTheme } = useThemeStore();
@@ -16,16 +15,16 @@ const App = () => {
   }, [darkMode]);
 
   return (
-    <div className="relative h-screen flex flex-col items-center justify-center transition-all bg-white dark:bg-black">
+    <div className="relative h-screen min-h-screen flex flex-col items-center justify-center transition-all bg-white dark:bg-black">
       {/* Background with Gradient and Mask */}
       <div
         className={`absolute inset-0 w-full h-full bg-[radial-gradient(125%_125%_at_50%_10%,#fff_40%,#63e_100%)] dark:bg-[radial-gradient(125%_125%_at_50%_10%,#000_40%,#9333ea_100%)]`}
       />
-      <div className="relative w-full h-full z-10">
+      <div className="relative w-full h-full overflow-auto z-10 mb-3">
         <div className="relative flex flex-col items-end mr-3 md:mb z-20">
           <button
             onClick={toggleTheme}
-            className="mt-4 px-4 py-2 rounded bg-blue-500 text-white dark:bg-yellow-500"
+            className="mt-4 px-4 py-2 rounded border border-purple-800 text-purple-800 "
           >
             Toggle Theme
           </button>
